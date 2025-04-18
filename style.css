@@ -10,9 +10,11 @@ body{
 }
 #container{
     border: 5px solid rgb(255, 173, 20);
- margin-top: 2px;
+ /* margin-top: 2px; */
  height: 90vh;
  width:28vw;
+ max-width: 100vw;
+ min-width: 28vw;
  background-color: black;
  border-radius: 50px;
  display:grid;
@@ -20,10 +22,19 @@ body{
  align-content: end;
  grid-row-gap: 10px;
  grid-column-gap: 10px;
- grid-template-columns: 12vh 12vh 12vh 12vh;
+ grid-template-columns: 20vw 20vw 20vw 20vw;
  grid-template-rows: 12vh 12vh 12vh 12vh 12vh 12vh;
  
 }
+@media only screen and (max-width: 600px){
+    #container{
+        width:100vw;
+        height:100vh;
+        padding:2px;
+        margin:2px;
+    }
+}
+
 #write{
     /* height:10hv;
     width:25vw; */
@@ -40,7 +51,7 @@ body{
 }
 .btn{
     border-radius: 60px;
-    font-size:25px;
+    font-size:2rem;
     background-color:black;
     color:white;
     border:none;
